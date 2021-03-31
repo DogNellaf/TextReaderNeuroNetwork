@@ -41,6 +41,15 @@ namespace NeuroNetwork
             return 1.0 / (1.0 + Math.Exp(-x));
         }
 
+        [Obsolete] //использовать только для теста
+        public void SetWeights(params double[] weights)
+        {
+            for (int i = 0; i < weights.Length; i++)
+            {
+                Weights[i] = weights[i];
+            }
+        }
+
         public override string ToString()
         {
             return Output.ToString();
